@@ -6,7 +6,7 @@ public class MusicPlayer : MonoBehaviour {
 
     static MusicPlayer myMusicPlayer = null;
 
-    void Awake () //this is the first methode that is run in Unity
+    void Awake () //this is the first method that is run in Unity
     { 
         //if myMusicPlayer is the 1st instance 
         if (myMusicPlayer == null)
