@@ -21,7 +21,7 @@ public class paddle : MonoBehaviour {
         //this.transform.position.y: keeps the starting y-value
         Vector3 paddlePosition = new Vector3(2f, this.transform.position.y, 0f);
 
-        paddlePosition.x = mousePosInUnits;
+        paddlePosition.x = Mathf.Clamp(mousePosInUnits, -6.5f,6.5f);
 
         //set the position of the paddle
         this.transform.position = paddlePosition;

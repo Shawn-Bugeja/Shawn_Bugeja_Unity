@@ -18,4 +18,17 @@ public class LevelManager : MonoBehaviour {
         print("Exiting level");
         UnityEditor.EditorApplication.isPlaying = false;
     }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void BrickDestoryed()
+    {
+        if(Brick.breakableCount <= 0)
+        {
+            LoadNextLevel();
+        }
+    }
 }

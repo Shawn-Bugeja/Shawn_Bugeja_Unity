@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class loseCollider : MonoBehaviour {
 
-    public LevelManager myLevelManager;
+    private LevelManager myLevelManager;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -14,13 +14,13 @@ public class loseCollider : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        myLevelManager.LoadLevel("Win");
+        myLevelManager.LoadLevel("lose");
     }
 
     // Use this for initialization
     void Start () {
-		
-	}
+        myLevelManager = GameObject.FindObjectOfType<LevelManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
